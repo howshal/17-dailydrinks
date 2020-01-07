@@ -40,15 +40,15 @@ const OrderEditor = (props) => {
                 <ul className="order-editor__list">
                     <li>
                         <label htmlFor="order-name">品名：</label>
-                        <input type="text" name="order-name" value={name} onChange={e => setName(e.target.value)} required />
+                        <input type="text" id="order-name" name="order-name" value={name} onChange={e => setName(e.target.value)} required />
                     </li>
                     <li>
                         <label htmlFor="order-price">價格：</label>
-                        <input type="number" name="order-price" value={price} onChange={e => setPrice(parseInt(e.target.value))} required />
+                        <input type="number" id="order-price" name="order-price" value={price} onChange={e => setPrice(parseInt(e.target.value))} required />
                     </li>
                     <li>
                         <label htmlFor="order-notes">備註：</label>
-                        <textarea name="order-notes" value={notes} onChange={e => setNotes(e.target.value)} />
+                        <textarea name="order-notes" id="order-notes" value={notes} onChange={e => setNotes(e.target.value)} />
                     </li>
                 </ul>
                 <div className="order-editor__tray">
