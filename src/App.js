@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css';
+import OrderList from "./component/OrderList";
+import OrderEditor from "./component/OrderEditor";
+
+const App = () => {
+    const [editingId, setEditingId] = useState(-1);
+
+    const toggleEditing = () => {
+        setEditingId((editingId === -1) ? 0 : -1);
+    };
+
+    return (
+      <div className="app">
+        <header className="app-header">
+          <h1>Daily Drinks</h1>
+        </header>
+        <main className="app-body">
+            <h3>目前已點餐</h3>
+            <OrderList editHandler={setEditingId}/>
+        </main>
+        <div className="app-footer">
+            {(editingId >= 0) ? (
+                <OrderEditor orderId={editingId} />
+            ) : ''}
+            <button type="button" className="app-footer__button" onClick={() => toggleEditing()}>{(editingId === -1) ? '+' : 'X'}</button>
+        </div>
+      </div>
+    );
+};
 
 export default App;
