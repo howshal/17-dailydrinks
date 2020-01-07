@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9eb9651c-3f72-4e31-8299-47ba44235a5b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/OrderEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/OrderEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/OrdersRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/OrdersRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/LocalStorage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utility/TextFormatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utility/TextFormatter.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +93,7 @@
       <workItem from="1578297524311" duration="8718000" />
       <workItem from="1578361642902" duration="23369000" />
       <workItem from="1578395496879" duration="9260000" />
-      <workItem from="1578408463142" duration="1125000" />
+      <workItem from="1578408463142" duration="5328000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit from PHPStorm.">
       <created>1578298692410</created>
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578408904218</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Improved styling.">
+      <created>1578409603144</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578409603144</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,11 +145,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="766" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050/3840.347.1920.1050@0.0.1920.1050" timestamp="1578365036921" />
-    <state x="1021" y="40" key="CommitChangelistDialog2" timestamp="1578408903205">
+    <state x="1021" y="40" width="1527" height="991" key="CommitChangelistDialog2" timestamp="1578409602548">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="570" y="30" key="CommitChangelistDialog2/0.0.1920.1050/3840.347.1920.1050@0.0.1920.1050" timestamp="1578298691466" />
-    <state x="1021" y="40" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1578408903205" />
+    <state x="1021" y="40" width="1527" height="991" key="CommitChangelistDialog2/0.0.3440.1400@0.0.3440.1400" timestamp="1578409602548" />
     <state width="3397" height="363" key="GridCell.Tab.0.bottom" timestamp="1578408506298">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -165,9 +174,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="678" y="322" key="NewPhpClassDialog/0.0.1920.1050/3840.347.1920.1050@0.0.1920.1050" timestamp="1578364314365" />
+    <state x="1545" y="325" key="RollbackChangesDialog" timestamp="1578413239621">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1545" y="325" key="RollbackChangesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1578413239621" />
     <state x="1312" y="429" key="Vcs.Push.Dialog.v2" timestamp="1578408906503">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1312" y="429" key="Vcs.Push.Dialog.v2/0.0.3440.1400@0.0.3440.1400" timestamp="1578408906503" />
+    <state x="1376" y="330" key="run.anything.popup" timestamp="1578414146146">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1376" y="330" key="run.anything.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1578414146146" />
   </component>
 </project>

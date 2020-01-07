@@ -13,15 +13,7 @@ let changeHandler = null;
 
 /**
  *
- * @return {Array<Order>}
- */
-const getOrders = () => {
-    return orders;
-};
-
-/**
- *
- * @param id
+ * @param {int} id
  * @return {Order}
  */
 const getOrder = (id) => {
@@ -47,10 +39,10 @@ const createOrder = (name, price, notes = null) => {
 
 /**
  *
- * @param id
- * @param name
- * @param price
- * @param notes
+ * @param {int} id
+ * @param {string} name
+ * @param {number} price
+ * @param {?string} notes
  * @return {boolean}
  */
 const updateOrder = (id, name, price, notes = null) => {
@@ -65,7 +57,7 @@ const updateOrder = (id, name, price, notes = null) => {
 
 /**
  *
- * @param id
+ * @param {int} id
  * @return {boolean}
  */
 const deleteOrder = (id) => {
@@ -76,7 +68,7 @@ const deleteOrder = (id) => {
 
 /**
  *
- * @param handler
+ * @param {function} handler
  */
 const subscribe = (handler) => {
     if (typeof handler === 'function') {
@@ -88,12 +80,9 @@ const subscribe = (handler) => {
     }
 };
 
-/**
- *
- */
+
 const dispatchChange = () => {
-    console.log('Dispatching change.');
     changeHandler(orders);
 };
 
-export default {getOrders, getOrder, createOrder, updateOrder, deleteOrder, subscribe};
+export default {getOrder, createOrder, updateOrder, deleteOrder, subscribe};
