@@ -14,6 +14,9 @@ const OrderEditor = (props) => {
                 OrdersRepository.updateOrder(props.orderId, name, price, notes);
             } else {
                 OrdersRepository.createOrder(name, price, notes);
+                setName('');
+                setPrice(0);
+                setNotes('');
             }
         } catch (e) {
             alert(e);
@@ -22,6 +25,7 @@ const OrderEditor = (props) => {
 
     useEffect(() => {
         if (props.orderId > 0) {
+            // is editing order, load data from repository.
             const order = OrdersRepository.getOrder(props.orderId);
             setName(order.name);
             setPrice(order.price);
@@ -30,9 +34,10 @@ const OrderEditor = (props) => {
     }, [props.orderId]);
 
     return (
-        <div>
+        <div className="order-editor">
+            <h3>{(props.orderId > 0) ? '編輯' : '新增'}訂單</h3>
             <form onSubmit={(e) => e.preventDefault()}>
-                <ul>
+                <ul className="order-editor__list">
                     <li>
                         <label htmlFor="order-name">品名：</label>
                         <input type="text" name="order-name" value={name} onChange={e => setName(e.target.value)} required />
@@ -46,8 +51,9 @@ const OrderEditor = (props) => {
                         <textarea name="order-notes" value={notes} onChange={e => setNotes(e.target.value)} />
                     </li>
                 </ul>
-                <div>
-                    <button type="button" onClick={() => submit()}>{(props.orderId > 0) ? '儲存' : '新增'}</button>
+                <div className="order-editor__tray">
+                    <button type="button" className="item-button item-button--action" onClick={() => submit()}>{(props.orderId > 0) ? '儲存' : '新增'}</button>
+                    <button type="button" className="item-button item-button--minor" onClick={() => props.toggleAction()}>取消</button>
                 </div>
             </form>
         </div>
@@ -55,7 +61,8 @@ const OrderEditor = (props) => {
 };
 
 OrderEditor.propTypes = {
-    orderId: PropTypes.number.isRequired
+    orderId: PropTypes.number.isRequired,
+    toggleAction: PropTypes.func.isRequired
 };
 
 export default OrderEditor;

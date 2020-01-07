@@ -1,4 +1,5 @@
 import Order from "./Order";
+import {escapeHtml} from "../utility/TextFormatter";
 
 const orders = [
     new Order('奶茶', 40, '半糖去冰'),
@@ -36,7 +37,7 @@ const getOrder = (id) => {
  */
 const createOrder = (name, price, notes = null) => {
     try {
-        orders.push(new Order(name, price, notes));
+        orders.push(new Order(name, price, escapeHtml(notes)));
         dispatchChange();
         return true;
     } catch (e) {
@@ -54,7 +55,7 @@ const createOrder = (name, price, notes = null) => {
  */
 const updateOrder = (id, name, price, notes = null) => {
     try {
-        orders[id - 1] = new Order(name, price, notes);
+        orders[id - 1] = new Order(name, price, escapeHtml(notes));
         dispatchChange();
         return true;
     } catch (e) {

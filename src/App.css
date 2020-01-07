@@ -1,3 +1,18 @@
+body {
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .app, .app-footer {
+    max-width: 700px; margin: auto;
+  }
+
+  .app-body {
+    padding: 1em;
+    border: 1px solid #9E6833; border-radius: 15px;
+  }
+}
+
 .app {
 
 }
@@ -6,26 +21,120 @@
 
 }
 
+.app-title {
+  background-image: linear-gradient(to left, rgb(255, 21, 211), rgb(245, 72, 125) 10%, rgb(246, 105, 108) 50%, rgb(246, 147, 85));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
 .app-body {
 
 }
 
 .app-footer {
+  width: 100%;
   position: fixed; bottom: 0;
 }
 
 .app-footer__button {
   position: fixed; right: 1rem; bottom: 1rem;
-  width: 4rem; height: 4rem;
-  font-size: 3rem; font-weight: bold;
+  width: 4rem; height: 4rem; transition: 0.2s;
+  font-size: 3rem; font-weight: bold; color: #ffffff;
 
   border: none; border-radius: 2.5rem; outline: none;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
-
+  background-image: linear-gradient(to left, rgb(255, 21, 211), rgb(245, 72, 125) 10%, rgb(246, 105, 108) 50%, rgb(246, 147, 85));
+  cursor: pointer; user-select: none;
 }
 
 .app-footer__button:hover {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.6);
+  transform: scale(1.01, 1.01);
+}
 
+.app-footer__button:active {
+  transform: scale(0.975, 0.975);
+}
+
+.order-list {
+
+}
+
+.order-list--empty {
+  text-align: center;
+}
+
+.order-list__item {
+
+}
+
+.order-item {
+  display: flex; align-items: center;
+  margin-bottom: 5px; padding: 5px;
+  border: 1px solid #cccccc; border-radius: 5px;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+.order-item__content {
+  width: calc(100% - 6rem);
+}
+
+.order-item__notes {
+  padding: 0.33em;
+  font-size: 0.875em; color: #252525;
+}
+
+.order-item__actions {
+  width: 6rem; text-align: right;
+  user-select: none;
+}
+
+.item-button {
+  margin-right: 2px; padding: 0.5em;
+  border: none; border-radius: 0.5rem; outline: none;
+  font-size: 0.875rem; color: #ffffff;
+  cursor: pointer; transition: 0.2s;
+  user-select: none;
+}
+
+.item-button:active {
+  transform: scale(0.95, 0.95);
+}
+
+.item-button--action {
+  background-color: #142863;
+}
+
+.item-button--minor {
+  background-color: #d5d5d5;
+  color: #101010;
+}
+
+.item-button--warning {
+  background-color: #7a0e04;
+}
+
+.order-editor {
+  width: 100%; box-sizing: border-box; padding: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.order-editor input, .order-editor textarea {
+  padding: 0.33em; width: calc(100% - 5em);
+  border: 1px solid #cccccc; border-radius: 7px;
+}
+
+.order-editor__list {
+  list-style: none;
+}
+
+.order-editor__list > li {
+  margin-bottom: 0.2em;
+}
+
+.order-editor__tray {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
