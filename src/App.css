@@ -6,34 +6,11 @@ h1, h3 {
   margin: 0.5rem 0 0.5rem 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .app, .app-footer {
-    max-width: 700px; margin: auto;
-  }
-
-  .app-body {
-    padding: 1em;
-    border: 1px solid #9E6833; border-radius: 15px;
-  }
-}
-
-.app {
-
-}
-
-.app-header {
-
-}
-
 .app-title {
   background-image: linear-gradient(to left, rgb(255, 21, 211), rgb(245, 72, 125) 10%, rgb(246, 105, 108) 50%, rgb(246, 147, 85));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
-}
-
-.app-body {
-
 }
 
 .app-footer {
@@ -141,11 +118,13 @@ h1, h3 {
   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 768px) {
+  .app, .app-footer {
+    max-width: 700px; margin: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .app-body {
+    padding: 1em;
+    border: 1px solid #9E6833; border-radius: 15px;
   }
 }
